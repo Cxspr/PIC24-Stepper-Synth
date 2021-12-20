@@ -59,8 +59,7 @@ void setPin(Channel *this, uint16_t pin) {
         if (!(first_time == 0)) TRISB &= ~(1 << this->pin); //reverse previous pin's configuration
         TRISB |= (1 << pin); //configure newly declared pin for use
     }
-    s
-    channel->pin = pin; //store pin
+    this->pin = pin; //store pin
     first_time = 1;
 }
 
